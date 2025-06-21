@@ -19,7 +19,7 @@
   }
 
   p {
-    @apply font-sans-paragraph leading-[180%] md:leading-[180%];
+    @apply font-sans-paragraph leading-[180%] md:leading-[180%] lg:text-lg;
   }
 }
 
@@ -46,5 +46,9 @@
 
   @variant md {
     padding-inline: 8rem;
+  }
+
+  @variant lg {
+    padding-inline: 4rem;
   }
 }
