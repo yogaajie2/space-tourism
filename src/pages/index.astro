@@ -17,14 +17,36 @@ import "../styles/global.css";
   </head>
 
   <body
-    class="container bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300"
+    class="container bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300 md:bg-[url(/images/home/background-home-tablet.jpg)]"
   >
-    <header class="flex items-center justify-between py-6">
-      <Logo />
-      <IconHamburger />
+    <header
+      class="flex items-center justify-between py-6 md:-mx-32 md:justify-normal md:py-0"
+    >
+      <Logo class="md:mx-10" />
+      <IconHamburger class="md:hidden" />
+
+      <nav
+        class="text-preset-8 flex w-max flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md"
+      >
+        <a class="border-b-[3px] border-white py-9" href=""
+          ><span class="mr-3 font-bold">00</span>HOME</a
+        >
+
+        <a class="border-b-[3px] border-transparent py-9" href=""
+          ><span class="mr-3 font-bold">01</span>DESTINATION</a
+        >
+
+        <a class="border-b-[3px] border-transparent py-9" href=""
+          ><span class="mr-3 font-bold">02</span>CREW</a
+        >
+
+        <a class="border-b-[3px] border-transparent py-9" href=""
+          ><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
+        >
+      </nav>
     </header>
 
-    <main class="py-6">
+    <main class="py-6 md:py-32">
       <h5>SO, YOU WANT TO TRAVEL TO</h5>
       <h1 class="py-6">SPACE</h1>
 
@@ -36,7 +58,7 @@ import "../styles/global.css";
       </p>
 
       <button
-        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase"
+        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase md:h-[272px] md:w-[272px]"
         type="button"
       >
         <h4>EXPLORE</h4>
