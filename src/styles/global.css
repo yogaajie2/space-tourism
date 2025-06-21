@@ -1,1 +1,44 @@
 @import "tailwindcss";
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  h1 {
+    @apply font-serif text-7xl text-white;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h5 {
+    @apply tracking-widest uppercase;
+  }
+
+  p {
+    @apply font-sans-paragraph leading-[180%];
+  }
+}
+
+/* @layer components {
+
+} */
+
+@theme {
+  --color-*: initial;
+  --color-white: hsl(0, 0%, 100%);
+  --color-blue-300: hsl(231, 77%, 90%);
+  --color-blue-900: hsl(230, 35%, 7%);
+
+  --font-sans: "Barlow Condensed", "sans-serif";
+  --font-sans-paragraph: "Barlow", "sans-serif";
+  --font-serif: "Bellefair", "serif";
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
