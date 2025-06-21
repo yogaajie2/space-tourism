@@ -331,6 +331,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/barlow-condensed@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/barlow-condensed@npm:5.2.6"
+  checksum: 10c0/7a70f6c9f7ac4264f2a21f5d4ec7ef6bdcdaa07dfc90143e2d8342e32ecc588a6b6d49181ed2fbd9baefd3c519c5ed10c99094c0f9ea9d5f1702f472b5d21c73
+  languageName: node
+  linkType: hard
+
+"@fontsource/barlow@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/barlow@npm:5.2.6"
+  checksum: 10c0/c2811918cbe3fb50437b25686a3294545cf108d93b9dce7ec9af120d382488dae23950eb56b2126f0659ecb048388af83481e589980daf083e47ce7b2de2ca23
+  languageName: node
+  linkType: hard
+
+"@fontsource/bellefair@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/bellefair@npm:5.2.6"
+  checksum: 10c0/df72786333b7639f527235dab3d194645c6bb2467d03605555fd7764c804a1b3315b52c0466f7377bde7d251fcbf5cb6bb98f2f7279ef1a5b94e3bbb1c64afbf
+  languageName: node
+  linkType: hard
+
 "@img/sharp-darwin-arm64@npm:0.33.5":
   version: 0.33.5
   resolution: "@img/sharp-darwin-arm64@npm:0.33.5"
@@ -4020,6 +4041,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "space-tourism@workspace:."
   dependencies:
+    "@fontsource/barlow": "npm:^5.2.6"
+    "@fontsource/barlow-condensed": "npm:^5.2.6"
+    "@fontsource/bellefair": "npm:^5.2.6"
     "@tailwindcss/vite": "npm:^4.1.10"
     astro: "npm:^5.10.0"
     prettier: "npm:3.5.3"
