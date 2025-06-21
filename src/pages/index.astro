@@ -17,16 +17,16 @@ import "../styles/global.css";
   </head>
 
   <body
-    class="container bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300 md:bg-[url(/images/home/background-home-tablet.jpg)]"
+    class="bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300 md:bg-[url(/images/home/background-home-tablet.jpg)] lg:h-max lg:bg-[url(/images/home/background-home-desktop.jpg)] lg:bg-no-repeat"
   >
     <header
-      class="flex items-center justify-between py-6 md:-mx-32 md:justify-normal md:py-0"
+      class="flex items-center justify-between px-6 py-6 md:justify-normal md:p-0 lg:items-end"
     >
-      <Logo class="md:mx-10" />
+      <Logo class="md:mx-10 lg:my-6" />
       <IconHamburger class="md:hidden" />
 
       <nav
-        class="text-preset-8 flex w-max flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md"
+        class="text-preset-8 hidden flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md md:flex lg:mt-10 lg:ml-auto lg:w-1/2 lg:flex-none"
       >
         <a class="border-b-[3px] border-white py-9" href=""
           ><span class="mr-3 font-bold">00</span>HOME</a
@@ -46,19 +46,23 @@ import "../styles/global.css";
       </nav>
     </header>
 
-    <main class="py-6 md:py-32">
-      <h5>SO, YOU WANT TO TRAVEL TO</h5>
-      <h1 class="py-6">SPACE</h1>
+    <main
+      class="container py-6 md:py-32 lg:mt-auto lg:flex lg:h-screen lg:items-end lg:justify-between"
+    >
+      <div class="text-left lg:w-1/2">
+        <h5>SO, YOU WANT TO TRAVEL TO</h5>
+        <h1 class="py-6">SPACE</h1>
 
-      <p>
-        Let’s face it; if you want to go to space, you might as well genuinely
-        go to outer space and not hover kind of on the edge of it. Well sit
-        back, and relax because we’ll give you a truly out of this world
-        experience!
-      </p>
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
 
       <button
-        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase md:h-[272px] md:w-[272px]"
+        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase md:h-[272px] md:w-[272px] lg:mt-0"
         type="button"
       >
         <h4>EXPLORE</h4>
