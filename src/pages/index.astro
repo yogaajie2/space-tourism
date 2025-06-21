@@ -30,7 +30,33 @@ import "../styles/global.css";
         />
       </div>
 
-      <IconHamburger class="md:hidden" />
+      <IconHamburger class="z-10 md:hidden" />
+
+      <aside
+        class="text-preset-8 fixed top-0 right-0 h-screen w-2/3 bg-white/5 pt-[133px] pl-8 text-left text-white backdrop-blur-xl md:hidden"
+      >
+        <nav class="flex flex-col gap-8">
+          <a
+            class="border-r-[3px] border-white transition-colors hover:border-white/50"
+            href=""><span class="mr-3 font-bold">00</span>HOME</a
+          >
+
+          <a
+            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
+            href=""><span class="mr-3 font-bold">01</span>DESTINATION</a
+          >
+
+          <a
+            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
+            href=""><span class="mr-3 font-bold">02</span>CREW</a
+          >
+
+          <a
+            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
+            href=""><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
+          >
+        </nav>
+      </aside>
 
       <nav
         class="text-preset-8 hidden flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md md:flex lg:mt-10 lg:ml-auto lg:w-1/2 lg:flex-none"
