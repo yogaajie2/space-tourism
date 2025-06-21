@@ -7,25 +7,27 @@
   }
 
   h1 {
-    @apply font-serif text-7xl text-white;
+    @apply font-serif text-7xl text-white md:text-[144px];
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-lg md:text-3xl;
   }
 
   h5 {
-    @apply tracking-widest uppercase;
+    @apply tracking-widest uppercase md:text-3xl;
   }
 
   p {
-    @apply font-sans-paragraph leading-[180%];
+    @apply font-sans-paragraph leading-[180%] md:leading-[180%];
   }
 }
 
-/* @layer components {
-
-} */
+@layer components {
+  .text-preset-8 {
+    @apply md:tracking-widest;
+  }
+}
 
 @theme {
   --color-*: initial;
@@ -41,4 +43,8 @@
 @utility container {
   margin-inline: auto;
   padding-inline: 1.5rem;
+
+  @variant md {
+    padding-inline: 8rem;
+  }
 }
