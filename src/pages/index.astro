@@ -1,5 +1,10 @@
 ---
-import "./src/styles/global.css";
+import "@fontsource/barlow";
+import "@fontsource/barlow-condensed";
+import "@fontsource/bellefair";
+import IconHamburger from "../assets/shared/icon-hamburger.svg";
+import Logo from "../assets/shared/logo.svg";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -11,7 +16,31 @@ import "./src/styles/global.css";
     <title>Frontend Mentor | Space Tourism Website</title>
   </head>
 
-  <body>
-    <h1 class="text-yellow-300 lg:text-red-50">Astro</h1>
+  <body
+    class="container bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300"
+  >
+    <header class="flex items-center justify-between py-6">
+      <Logo />
+      <IconHamburger />
+    </header>
+
+    <main class="py-6">
+      <h5>SO, YOU WANT TO TRAVEL TO</h5>
+      <h1 class="py-6">SPACE</h1>
+
+      <p>
+        Let’s face it; if you want to go to space, you might as well genuinely
+        go to outer space and not hover kind of on the edge of it. Well sit
+        back, and relax because we’ll give you a truly out of this world
+        experience!
+      </p>
+
+      <button
+        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase"
+        type="button"
+      >
+        <h4>EXPLORE</h4>
+      </button>
+    </main>
   </body>
 </html>
