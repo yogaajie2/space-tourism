@@ -11,7 +11,7 @@
   }
 
   h2 {
-    @apply font-serif text-6xl text-white uppercase md:text-[80px];
+    @apply font-serif text-6xl text-white uppercase md:text-[80px] lg:text-8xl;
   }
 
   h4 {
