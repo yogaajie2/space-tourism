@@ -7,10 +7,10 @@ import Logo from "../assets/shared/logo.svg";
 import "../styles/global.css";
 
 interface Props {
-  background: string;
+  page: string;
 }
 
-const { background } = Astro.props;
+const { page } = Astro.props;
 ---
 
 <html lang="en">
@@ -23,7 +23,7 @@ const { background } = Astro.props;
   </head>
 
   <body
-    class={`bg-[url(/images/${background}/background-${background}-mobile.jpg)] bg-cover text-center text-blue-300 md:bg-[url(/images/${background}/background-${background}-tablet.jpg)] lg:h-max lg:bg-[url(/images/${background}/background-${background}-desktop.jpg)] lg:bg-no-repeat`}
+    class={`${page} bg-cover text-center text-blue-300 lg:h-max lg:bg-no-repeat`}
   >
     <header
       class="sticky top-0 left-0 flex w-full items-center justify-between px-6 py-6 md:justify-normal md:p-0 lg:items-end"
@@ -69,12 +69,13 @@ const { background } = Astro.props;
       >
         <a
           class="border-b-[3px] border-white py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">00</span>HOME</a
+          href="/"><span class="mr-3 font-bold">00</span>HOME</a
         >
 
         <a
           class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">01</span>DESTINATION</a
+          href="/destination/"
+          ><span class="mr-3 font-bold">01</span>DESTINATION</a
         >
 
         <a
@@ -96,3 +97,32 @@ const { background } = Astro.props;
     </main>
   </body>
 </html>
+
+<style>
+  body.home {
+    background-image: url("/images/home/background-home-mobile.jpg");
+  }
+
+  body.destination {
+    background-image: url("/images/destination/background-destination-mobile.jpg");
+  }
+  @media (min-width: 768px) {
+    body.home {
+      background-image: url("/images/home/background-home-tablet.jpg");
+    }
+
+    body.destination {
+      background-image: url("/images/destination/background-destination-tablet.jpg");
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body.home {
+      background-image: url("/images/home/background-home-desktop.jpg");
+    }
+
+    body.destination {
+      background-image: url("/images/destination/background-destination-desktop.jpg");
+    }
+  }
+</style>
