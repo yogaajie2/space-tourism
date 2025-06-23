@@ -23,7 +23,7 @@ const { page } = Astro.props;
   </head>
 
   <body
-    class={`${page} bg-cover text-center text-blue-300 lg:h-max lg:bg-no-repeat`}
+    class={`${page} bg-cover text-center text-blue-300 lg:h-max bg-no-repeat`}
   >
     <header
       class="sticky top-0 left-0 flex w-full items-center justify-between px-6 py-6 md:justify-normal md:p-0 lg:items-end"
@@ -90,9 +90,7 @@ const { page } = Astro.props;
       </nav>
     </header>
 
-    <main
-      class="container py-6 md:py-32 lg:mt-auto lg:flex lg:h-screen lg:items-end lg:justify-between"
-    >
+    <main class="container">
       <slot />
     </main>
   </body>
