@@ -7,15 +7,23 @@
   }
 
   h1 {
-    @apply font-serif text-7xl text-white md:text-[144px];
+    @apply font-serif text-7xl text-white uppercase md:text-[144px];
+  }
+
+  h2 {
+    @apply font-serif text-6xl text-white uppercase;
   }
 
   h4 {
-    @apply text-lg md:text-3xl;
+    @apply text-lg uppercase md:text-3xl;
   }
 
   h5 {
     @apply tracking-widest uppercase md:text-3xl;
+  }
+
+  h6 {
+    @apply font-serif tracking-widest uppercase lg:text-3xl;
   }
 
   p {
@@ -24,8 +32,12 @@
 }
 
 @layer components {
+  .text-preset-7 {
+    @apply text-sm tracking-widest uppercase;
+  }
+
   .text-preset-8 {
-    @apply md:tracking-widest;
+    @apply text-sm tracking-widest lg:text-base;
   }
 }
 
