@@ -1,109 +1,23 @@
 ---
-import "@fontsource/barlow";
-import "@fontsource/barlow-condensed";
-import "@fontsource/bellefair";
-import IconHamburger from "../assets/shared/icon-hamburger.svg";
-import Logo from "../assets/shared/logo.svg";
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Frontend Mentor | Space Tourism Website</title>
-  </head>
+<Layout background="home">
+  <div class="lg:w-1/2 lg:text-left">
+    <h5>SO, YOU WANT TO TRAVEL TO</h5>
+    <h1 class="py-6">SPACE</h1>
 
-  <body
-    class="bg-[url(/images/home/background-home-mobile.jpg)] bg-cover text-center text-blue-300 md:bg-[url(/images/home/background-home-tablet.jpg)] lg:h-max lg:bg-[url(/images/home/background-home-desktop.jpg)] lg:bg-no-repeat"
+    <p>
+      Let’s face it; if you want to go to space, you might as well genuinely go
+      to outer space and not hover kind of on the edge of it. Well sit back, and
+      relax because we’ll give you a truly out of this world experience!
+    </p>
+  </div>
+
+  <button
+    class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase transition-all hover:outline-[88px] hover:outline-white/10 md:h-[272px] md:w-[272px] lg:mt-0"
+    type="button"
   >
-    <header
-      class="sticky top-0 left-0 flex w-full items-center justify-between px-6 py-6 md:justify-normal md:p-0 lg:items-end"
-    >
-      <div class="flex w-1/2 items-center">
-        <Logo class="md:mx-10 lg:mx-16 lg:my-6" />
-
-        <hr
-          class="z-10 my-auto -mr-8 hidden flex-auto text-white opacity-25 lg:flex"
-        />
-      </div>
-
-      <IconHamburger class="z-10 md:hidden" />
-
-      <aside
-        class="text-preset-8 fixed top-0 right-0 h-screen w-2/3 bg-white/5 pt-[133px] pl-8 text-left text-white backdrop-blur-xl md:hidden"
-      >
-        <nav class="flex flex-col gap-8">
-          <a
-            class="border-r-[3px] border-white transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">00</span>HOME</a
-          >
-
-          <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">01</span>DESTINATION</a
-          >
-
-          <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">02</span>CREW</a
-          >
-
-          <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
-          >
-        </nav>
-      </aside>
-
-      <nav
-        class="text-preset-8 hidden flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md md:flex lg:mt-10 lg:ml-auto lg:w-1/2 lg:flex-none"
-      >
-        <a
-          class="border-b-[3px] border-white py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">00</span>HOME</a
-        >
-
-        <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">01</span>DESTINATION</a
-        >
-
-        <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">02</span>CREW</a
-        >
-
-        <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
-        >
-      </nav>
-    </header>
-
-    <main
-      class="container py-6 md:py-32 lg:mt-auto lg:flex lg:h-screen lg:items-end lg:justify-between"
-    >
-      <div class="lg:w-1/2 lg:text-left">
-        <h5>SO, YOU WANT TO TRAVEL TO</h5>
-        <h1 class="py-6">SPACE</h1>
-
-        <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
-        </p>
-      </div>
-
-      <button
-        class="mt-32 h-36 w-36 rounded-full bg-white font-serif text-blue-900 uppercase transition-all hover:outline-[88px] hover:outline-white/10 md:h-[272px] md:w-[272px] lg:mt-0"
-        type="button"
-      >
-        <h4>EXPLORE</h4>
-      </button>
-    </main>
-  </body>
-</html>
+    <h4>EXPLORE</h4>
+  </button>
+</Layout>
