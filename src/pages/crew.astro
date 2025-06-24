@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import ImageMoon from "../assets/destination/image-moon.webp";
+---
+
+<Layout page="crew">
+  <div class="py-10">
+    <div
+      class="flex items-center justify-center gap-6 text-white md:-mx-24 md:justify-start lg:mx-0"
+    >
+      <span class="font-bold opacity-25 md:text-xl lg:text-3xl">01</span>
+
+      <h6 class="lg:font-sans lg:text-3xl lg:tracking-widest">
+        PICK YOUR CREW
+      </h6>
+    </div>
+
+    <div class="mt-6 lg:flex lg:h-[80vh] lg:items-center lg:gap-8">
+      <div class="py-7 md:py-10 lg:w-1/2">
+        <Image
+          alt="Moon"
+          class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
+          src={ImageMoon}
+        />
+      </div>
+
+      <div class="mt-8 lg:w-1/2 lg:px-12">
+        <nav class="flex items-center justify-center gap-8 lg:justify-start">
+          <button
+            class="text-preset-8 border-b-[3px] border-white py-3 text-white transition-colors hover:border-white/50"
+            type="button">MOON</button
+          >
+
+          <button
+            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
+            type="button">MARS</button
+          >
+
+          <button
+            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
+            type="button">EUROPA</button
+          >
+
+          <button
+            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
+            type="button">TITAN</button
+          >
+        </nav>
+
+        <section class="mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start">
+          <h2>MOON</h2>
+
+          <p>
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </section>
+
+        <hr class="mt-6 text-white opacity-25 lg:mt-10" />
+
+        <section
+          class="mt-6 flex flex-col gap-6 md:flex-row md:justify-evenly lg:mt-10 lg:justify-start lg:text-start"
+        >
+          <div class="flex flex-col gap-3 lg:w-1/2">
+            <p class="text-preset-7">AVG. DISTANCE</p>
+            <h6 class="font-serif text-3xl text-white">384,400 km</h6>
+          </div>
+
+          <div class="flex flex-col gap-3 lg:w-1/2">
+            <p class="text-preset-7">Est. travel time</p>
+            <h6 class="font-serif text-3xl text-white">3 days</h6>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>

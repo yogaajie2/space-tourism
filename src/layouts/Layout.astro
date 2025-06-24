@@ -80,7 +80,7 @@ const { page } = Astro.props;
 
         <a
           class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">02</span>CREW</a
+          href="/crew/"><span class="mr-3 font-bold">02</span>CREW</a
         >
 
         <a
@@ -104,6 +104,10 @@ const { page } = Astro.props;
   body.destination {
     background-image: url("/images/destination/background-destination-mobile.jpg");
   }
+
+  body.crew {
+    background-image: url("/images/crew/background-crew-mobile.jpg");
+  }
   @media (min-width: 768px) {
     body.home {
       background-image: url("/images/home/background-home-tablet.jpg");
@@ -111,6 +115,10 @@ const { page } = Astro.props;
 
     body.destination {
       background-image: url("/images/destination/background-destination-tablet.jpg");
+    }
+
+    body.crew {
+      background-image: url("/images/crew/background-crew-tablet.jpg");
     }
   }
 
@@ -121,6 +129,10 @@ const { page } = Astro.props;
 
     body.destination {
       background-image: url("/images/destination/background-destination-desktop.jpg");
+    }
+
+    body.crew {
+      background-image: url("/images/crew/background-crew-desktop.jpg");
     }
   }
 </style>
