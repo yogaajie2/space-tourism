@@ -14,8 +14,12 @@
     @apply font-serif text-6xl text-white uppercase md:text-[80px] lg:text-8xl;
   }
 
+  h3 {
+    @apply font-serif text-2xl uppercase;
+  }
+
   h4 {
-    @apply text-lg uppercase md:text-3xl;
+    @apply font-serif text-lg uppercase md:text-3xl;
   }
 
   h5 {
