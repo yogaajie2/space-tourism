@@ -15,11 +15,11 @@
   }
 
   h3 {
-    @apply font-serif text-2xl uppercase md:text-[40px];
+    @apply font-serif text-2xl uppercase md:text-[40px] lg:text-6xl;
   }
 
   h4 {
-    @apply font-serif text-lg uppercase md:text-2xl;
+    @apply font-serif text-lg uppercase md:text-2xl lg:text-3xl;
   }
 
   h5 {
