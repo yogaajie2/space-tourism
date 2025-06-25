@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import ImageLaunchVehiclePortrait from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import ImageSpaceCapsulePortrait from "../assets/technology/image-space-capsule-portrait.jpg";
+import ImageSpaceportPortrait from "../assets/technology/image-spaceport-portrait.jpg";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -19,49 +21,108 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="mt-6 lg:flex lg:h-[80vh] lg:flex-row-reverse lg:items-center lg:justify-end lg:gap-8 lg:text-start"
     >
-      <section class="-mx-6 pt-16 md:-mx-32 lg:-mr-36 lg:ml-0">
-        <Image
-          alt="Douglas Hurley"
-          class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[600px] lg:w-[600px]"
-          src={ImageLaunchVehiclePortrait}
-        />
+      <section class="swiper -mx-6 pt-16 md:-mx-32 lg:-mr-36! lg:ml-0!">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <Image
+              alt="Launch Vehicle"
+              class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[600px] lg:w-[600px]"
+              src={ImageLaunchVehiclePortrait}
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <Image
+              alt="Spaceport"
+              class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[600px] lg:w-[600px]"
+              src={ImageSpaceportPortrait}
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <Image
+              alt="Space Capsule"
+              class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[600px] lg:w-[600px]"
+              src={ImageSpaceCapsulePortrait}
+            />
+          </div>
+        </div>
       </section>
 
       <div
         class="mt-8 flex flex-col gap-10 lg:h-full lg:w-2/3 lg:flex-row lg:items-center lg:py-12"
       >
-        <nav class="flex justify-center gap-4 lg:flex-col lg:gap-8">
-          <button
-            class="h-10 w-10 rounded-full border border-transparent bg-white text-blue-900 transition-colors hover:border-white md:h-14 md:w-14"
-            type="button"><h4>1</h4></button
-          >
-
-          <button
-            class="h-10 w-10 rounded-full border border-white/25 bg-transparent text-white transition-colors hover:border-white md:h-14 md:w-14"
-            type="button"><h4>2</h4></button
-          >
-
-          <button
-            class="h-10 w-10 rounded-full border border-white/25 bg-transparent text-white transition-colors hover:border-white md:h-14 md:w-14"
-            type="button"><h4>3</h4></button
-          >
+        <nav
+          class="swiper-pagination flex justify-center gap-4 lg:flex-col lg:gap-8"
+        >
         </nav>
 
-        <section class="flex flex-col gap-4">
-          <div class="flex flex-col gap-4">
-            <h4 class="text-white/50">THE TERMINOLOGY...</h4>
-            <h3 class="text-white">LAUNCH VEHICLE</h3>
-          </div>
+        <section class="flex flex-col gap-4 lg:w-5/6">
+          <h4 class="text-white/50">THE TERMINOLOGY...</h4>
 
-          <p>
-            A launch vehicle or carrier rocket is a rocket-propelled vehicle
-            used to carry a payload from Earth's surface to space, usually to
-            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful
-            in operation. Standing 150 metres tall, it's quite an awe-inspiring
-            sight on the launch pad!
-          </p>
+          <div class="swiper w-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="text-white">LAUNCH VEHICLE</h3>
+
+                <p>
+                  A launch vehicle or carrier rocket is a rocket-propelled
+                  vehicle used to carry a payload from Earth's surface to space,
+                  usually to Earth orbit or beyond. Our WEB-X carrier rocket is
+                  the most powerful in operation. Standing 150 metres tall, it's
+                  quite an awe-inspiring sight on the launch pad!
+                </p>
+              </div>
+
+              <div class="swiper-slide">
+                <h3 class="text-white">SPACEPORT</h3>
+
+                <p>
+                  A spaceport or cosmodrome is a site for launching (or
+                  receiving) spacecraft, by analogy to the seaport for ships or
+                  airport for aircraft. Based in the famous Cape Canaveral, our
+                  spaceport is ideally situated to take advantage of the Earth’s
+                  rotation for launch.
+                </p>
+              </div>
+
+              <div class="swiper-slide">
+                <h3 class="text-white">SPACE CAPSULE</h3>
+
+                <p>
+                  A space capsule is an often-crewed spacecraft that uses a
+                  blunt-body reentry capsule to reenter the Earth's atmosphere
+                  without wings. Our capsule is where you'll spend your time
+                  during the flight. It includes a space gym, cinema, and plenty
+                  of other activities to keep you entertained.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
   </div>
 </Layout>
+
+<script>
+  // Swiper
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
+
+  const swiper = new Swiper(".swiper", {
+    allowTouchMove: false,
+    modules: [Pagination],
+
+    pagination: {
+      bulletActiveClass: "technology-tab-active",
+      bulletClass: "technology-tab",
+      clickable: true,
+      el: ".swiper-pagination",
+
+      renderBullet: function (index, className) {
+        return `<button class="${className}" type="button"><h4>${index + 1}</h4></button>`;
+      },
+    },
+  });
+</script>
