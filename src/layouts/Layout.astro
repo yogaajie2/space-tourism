@@ -85,7 +85,8 @@ const { page } = Astro.props;
 
         <a
           class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
-          href=""><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
+          href="/technology/"
+          ><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
         >
       </nav>
     </header>
@@ -108,6 +109,10 @@ const { page } = Astro.props;
   body.crew {
     background-image: url("/images/crew/background-crew-mobile.jpg");
   }
+
+  body.technology {
+    background-image: url("/images/technology/background-technology-mobile.jpg");
+  }
   @media (min-width: 768px) {
     body.home {
       background-image: url("/images/home/background-home-tablet.jpg");
@@ -119,6 +124,10 @@ const { page } = Astro.props;
 
     body.crew {
       background-image: url("/images/crew/background-crew-tablet.jpg");
+    }
+
+    body.technology {
+      background-image: url("/images/technology/background-technology-tablet.jpg");
     }
   }
 
@@ -133,6 +142,10 @@ const { page } = Astro.props;
 
     body.crew {
       background-image: url("/images/crew/background-crew-desktop.jpg");
+    }
+
+    body.technology {
+      background-image: url("/images/technology/background-technology-desktop.jpg");
     }
   }
 </style>
