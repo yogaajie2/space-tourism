@@ -38,53 +38,55 @@ const { page } = Astro.props;
 
       <IconHamburger class="z-10 md:hidden" />
 
-      <!-- <aside
+      <aside
         class="text-preset-8 fixed top-0 right-0 h-screen w-2/3 bg-white/5 pt-[133px] pl-8 text-left text-white backdrop-blur-xl md:hidden"
       >
         <nav class="flex flex-col gap-8">
           <a
-            class="border-r-[3px] border-white transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">00</span>HOME</a
+            class={`border-r-[3px] transition-colors hover:border-white/50 ${Astro.url.pathname === "/" ? "border-white" : "border-transparent"}`}
+            href="/"><span class="mr-3 font-bold">00</span>HOME</a
           >
 
           <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">01</span>DESTINATION</a
+            class={`border-r-[3px] transition-colors hover:border-white/50 ${Astro.url.pathname === "/destination/" ? "border-white" : "border-transparent"}`}
+            href="/destination/"
+            ><span class="mr-3 font-bold">01</span>DESTINATION</a
           >
 
           <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">02</span>CREW</a
+            class={`border-r-[3px] transition-colors hover:border-white/50 ${Astro.url.pathname === "/crew/" ? "border-white" : "border-transparent"}`}
+            href="/crew/"><span class="mr-3 font-bold">02</span>CREW</a
           >
 
           <a
-            class="border-r-[3px] border-transparent transition-colors hover:border-white/50"
-            href=""><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
+            class={`border-r-[3px] transition-colors hover:border-white/50 ${Astro.url.pathname === "/technology/" ? "border-white" : "border-transparent"}`}
+            href="/technology/"
+            ><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
           >
         </nav>
-      </aside> -->
+      </aside>
 
       <nav
         class="text-preset-8 hidden flex-auto items-center justify-end gap-12 bg-white/5 px-9 text-white backdrop-blur-md md:flex lg:mt-10 lg:ml-auto lg:w-1/2 lg:flex-none"
       >
         <a
-          class="border-b-[3px] border-white py-9 transition-colors hover:border-white/50"
+          class={`border-b-[3px] py-9 transition-colors hover:border-white/50 ${Astro.url.pathname === "/" ? "border-white" : "border-transparent"}`}
           href="/"><span class="mr-3 font-bold">00</span>HOME</a
         >
 
         <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
+          class={`border-b-[3px] py-9 transition-colors hover:border-white/50 ${Astro.url.pathname === "/destination/" ? "border-white" : "border-transparent"}`}
           href="/destination/"
           ><span class="mr-3 font-bold">01</span>DESTINATION</a
         >
 
         <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
+          class={`border-b-[3px] py-9 transition-colors hover:border-white/50 ${Astro.url.pathname === "/crew/" ? "border-white" : "border-transparent"}`}
           href="/crew/"><span class="mr-3 font-bold">02</span>CREW</a
         >
 
         <a
-          class="border-b-[3px] border-transparent py-9 transition-colors hover:border-white/50"
+          class={`border-b-[3px] py-9 transition-colors hover:border-white/50 ${Astro.url.pathname === "/technology/" ? "border-white" : "border-transparent"}`}
           href="/technology/"
           ><span class="mr-3 font-bold">03</span>TECHNOLOGY</a
         >
