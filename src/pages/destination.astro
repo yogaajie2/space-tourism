@@ -1,7 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import "swiper/css";
 import Layout from "../layouts/Layout.astro";
+import ImageEuropa from "../assets/destination/image-europa.webp";
+import ImageMars from "../assets/destination/image-mars.webp";
 import ImageMoon from "../assets/destination/image-moon.webp";
+import ImageTitan from "../assets/destination/image-titan.webp";
 ---
 
 <Layout page="destination">
@@ -17,64 +21,195 @@ import ImageMoon from "../assets/destination/image-moon.webp";
     </div>
 
     <div class="mt-6 lg:flex lg:h-[80vh] lg:items-center lg:gap-8">
-      <div class="py-7 md:py-10 lg:w-1/2">
-        <Image
-          alt="Moon"
-          class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
-          src={ImageMoon}
-        />
-      </div>
-
-      <div class="mt-8 lg:w-1/2 lg:px-12">
-        <nav class="flex items-center justify-center gap-8 lg:justify-start">
-          <button
-            class="text-preset-8 border-b-[3px] border-white py-3 text-white transition-colors hover:border-white/50"
-            type="button">MOON</button
-          >
-
-          <button
-            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
-            type="button">MARS</button
-          >
-
-          <button
-            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
-            type="button">EUROPA</button
-          >
-
-          <button
-            class="text-preset-8 border-b-[3px] border-transparent py-3 transition-colors hover:border-white/50"
-            type="button">TITAN</button
-          >
-        </nav>
-
-        <section class="mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start">
-          <h2>MOON</h2>
-
-          <p>
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
-        </section>
-
-        <hr class="mt-6 text-white opacity-25 lg:mt-10" />
-
-        <section
-          class="mt-6 flex flex-col gap-6 md:flex-row md:justify-evenly lg:mt-10 lg:justify-start lg:text-start"
-        >
-          <div class="flex flex-col gap-3 lg:w-1/2">
-            <p class="text-preset-7">AVG. DISTANCE</p>
-            <h6 class="font-serif text-3xl text-white">384,400 km</h6>
+      <div class="swiper py-7 md:py-10 lg:w-1/2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <Image
+              alt="Moon"
+              class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
+              src={ImageMoon}
+            />
           </div>
 
-          <div class="flex flex-col gap-3 lg:w-1/2">
-            <p class="text-preset-7">Est. travel time</p>
-            <h6 class="font-serif text-3xl text-white">3 days</h6>
+          <div class="swiper-slide">
+            <Image
+              alt="Mars"
+              class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
+              src={ImageMars}
+            />
           </div>
-        </section>
+
+          <div class="swiper-slide">
+            <Image
+              alt="Europa"
+              class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
+              src={ImageEuropa}
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <Image
+              alt="Titan"
+              class="mx-auto h-[150px] w-[150px] md:h-[300px] md:w-[300px] lg:h-[480px] lg:w-[480px]"
+              src={ImageTitan}
+            />
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="mt-8 lg:w-1/2 lg:px-12">
+      <nav
+        class="swiper-pagination flex items-center justify-center gap-8 lg:justify-start"
+      >
+      </nav>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <section
+            class="swiper-slide mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start"
+          >
+            <h2>MOON</h2>
+
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+          </section>
+
+          <section
+            class="swiper-slide mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start"
+          >
+            <h2>MARS</h2>
+
+            <p>
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+          </section>
+
+          <section
+            class="swiper-slide mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start"
+          >
+            <h2>EUROPA</h2>
+
+            <p>
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+          </section>
+
+          <section
+            class="swiper-slide mt-6 flex flex-col gap-4 lg:mt-10 lg:text-start"
+          >
+            <h2>TITAN</h2>
+
+            <p>
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <hr class="mt-6 text-white opacity-25 lg:mt-10" />
+
+      <section
+        class="mt-6 flex flex-col gap-6 md:flex-row md:gap-0 lg:mt-10 lg:justify-start lg:text-start"
+      >
+        <div class="flex flex-col gap-3 md:w-1/2">
+          <p class="text-preset-7">AVG. DISTANCE</p>
+
+          <div class="swiper w-full">
+            <div class="swiper-wrapper">
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                384,400 km
+              </h6>
+
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                225 Mil. km
+              </h6>
+
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                628 Mil. km
+              </h6>
+
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                1.6 Bil km
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 md:w-1/2">
+          <p class="text-preset-7">Est. travel time</p>
+
+          <div class="swiper w-full">
+            <div class="swiper-wrapper">
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                3 days
+              </h6>
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                9 Months
+              </h6>
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                3 Years
+              </h6>
+              <h6 class="swiper-slide font-serif text-3xl text-white">
+                7 Years
+              </h6>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </Layout>
+
+<script>
+  // Swiper
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
+
+  function renderTabText(index: number) {
+    switch (index) {
+      case 0:
+        return "MOON";
+
+      case 1:
+        return "MARS";
+
+      case 2:
+        return "EUROPA";
+
+      case 3:
+        return "TITAN";
+
+      default:
+        break;
+    }
+  }
+
+  const swiper = new Swiper(".swiper", {
+    allowTouchMove: false,
+    modules: [Pagination],
+
+    pagination: {
+      bulletActiveClass: "destination-tab-active",
+      bulletClass: "destination-tab",
+      clickable: true,
+      el: ".swiper-pagination",
+
+      renderBullet: function (index, className) {
+        return `<button class=${className} type="button">${renderTabText(index)}</button>`;
+      },
+    },
+  });
+</script>
