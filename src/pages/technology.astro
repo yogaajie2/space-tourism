@@ -17,20 +17,20 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div
-      class="mt-6 lg:flex lg:h-[80vh] lg:items-center lg:gap-8 lg:text-start"
+      class="mt-6 lg:flex lg:h-[80vh] lg:flex-row-reverse lg:items-center lg:justify-end lg:gap-8 lg:text-start"
     >
-      <section class="-mx-6 pt-16 md:-mx-32 lg:w-1/2 lg:px-12">
+      <section class="-mx-6 pt-16 md:-mx-32 lg:-mr-36 lg:ml-0">
         <Image
           alt="Douglas Hurley"
-          class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[676px]"
+          class="mx-auto h-[258px] w-[768px] object-cover object-bottom md:h-[357px] md:w-screen md:object-center lg:h-[600px] lg:w-[600px]"
           src={ImageLaunchVehiclePortrait}
         />
       </section>
 
-      <div class="mt-8 flex flex-col gap-10 lg:h-full lg:w-1/2 lg:py-12">
-        <nav
-          class="flex justify-center gap-4 lg:mt-auto lg:justify-start lg:gap-10"
-        >
+      <div
+        class="mt-8 flex flex-col gap-10 lg:h-full lg:w-2/3 lg:flex-row lg:items-center lg:py-12"
+      >
+        <nav class="flex justify-center gap-4 lg:flex-col lg:gap-8">
           <button
             class="h-10 w-10 rounded-full border border-transparent bg-white text-blue-900 transition-colors hover:border-white md:h-14 md:w-14"
             type="button"><h4>1</h4></button
@@ -47,7 +47,7 @@ import Layout from "../layouts/Layout.astro";
           >
         </nav>
 
-        <section class="flex flex-col gap-4 lg:mt-auto">
+        <section class="flex flex-col gap-4">
           <div class="flex flex-col gap-4">
             <h4 class="text-white/50">THE TERMINOLOGY...</h4>
             <h3 class="text-white">LAUNCH VEHICLE</h3>
