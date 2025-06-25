@@ -2,6 +2,7 @@
 import "@fontsource/barlow";
 import "@fontsource/barlow-condensed";
 import "@fontsource/bellefair";
+import IconClose from "../assets/shared/icon-close.svg";
 import IconHamburger from "../assets/shared/icon-hamburger.svg";
 import Logo from "../assets/shared/logo.svg";
 import "../styles/global.css";
@@ -36,10 +37,13 @@ const { page } = Astro.props;
         />
       </div>
 
-      <IconHamburger class="z-10 md:hidden" />
+      <button class="z-10 md:hidden" type="button">
+        <IconClose class="hidden" id="iconClose" />
+        <IconHamburger id="iconHamburger" />
+      </button>
 
       <aside
-        class="text-preset-8 fixed top-0 right-0 h-screen w-2/3 bg-white/5 pt-[133px] pl-8 text-left text-white backdrop-blur-xl md:hidden"
+        class="text-preset-8 fixed top-0 -right-full h-screen w-2/3 bg-white/5 pt-[133px] pl-8 text-left text-white backdrop-blur-xl transition-all duration-500 md:hidden"
       >
         <nav class="flex flex-col gap-8">
           <a
@@ -151,3 +155,20 @@ const { page } = Astro.props;
     }
   }
 </style>
+
+<script>
+  const iconClose = document.querySelector("#iconClose"),
+    iconHamburger = document.querySelector("#iconHamburger"),
+    menuButton = document.querySelector("header button"),
+    menu = document.querySelector("aside");
+
+  let isMenuShown = false;
+
+  menuButton?.addEventListener("click", () => {
+    iconClose?.classList.toggle("hidden");
+    iconHamburger?.classList.toggle("hidden");
+    menu?.classList.toggle("-right-full");
+    menu?.classList.toggle("right-0");
+    isMenuShown = !isMenuShown;
+  });
+</script>
