@@ -36,12 +36,12 @@
 }
 
 @layer components {
-  .text-preset-7 {
-    @apply text-sm tracking-widest uppercase;
+  .crew-tab {
+    @apply h-2.5 w-2.5 rounded-full bg-white/15 transition-colors hover:bg-white/50 lg:h-4 lg:w-4;
   }
 
-  .text-preset-8 {
-    @apply text-sm tracking-widest lg:text-base;
+  .crew-tab-active {
+    @apply h-2.5 w-2.5 rounded-full bg-white transition-colors hover:bg-white/50 lg:h-4 lg:w-4;
   }
 
   .destination-tab {
@@ -58,6 +58,14 @@
 
   .technology-tab-active {
     @apply h-10 w-10 rounded-full border border-transparent bg-white text-blue-900 transition-colors hover:border-white md:h-14 md:w-14;
+  }
+
+  .text-preset-7 {
+    @apply text-sm tracking-widest uppercase;
+  }
+
+  .text-preset-8 {
+    @apply text-sm tracking-widest lg:text-base;
   }
 }
 
