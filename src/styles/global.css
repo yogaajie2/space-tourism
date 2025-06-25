@@ -51,6 +51,14 @@
   .destination-tab-active {
     @apply border-b-[3px] border-white py-3 text-sm tracking-widest text-white transition-colors hover:border-white/50 lg:text-base;
   }
+
+  .technology-tab {
+    @apply h-10 w-10 rounded-full border border-white/25 bg-transparent text-white transition-colors hover:border-white md:h-14 md:w-14;
+  }
+
+  .technology-tab-active {
+    @apply h-10 w-10 rounded-full border border-transparent bg-white text-blue-900 transition-colors hover:border-white md:h-14 md:w-14;
+  }
 }
 
 @theme {
