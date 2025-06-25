@@ -41,7 +41,7 @@ const { page } = Astro.props;
         />
       </div>
 
-      <button class="z-10 md:hidden" type="button">
+      <button class="z-10 md:hidden" id="menuButton" type="button">
         <IconClose class="hidden" id="iconClose" />
         <IconHamburger id="iconHamburger" />
       </button>
@@ -163,7 +163,7 @@ const { page } = Astro.props;
 <script>
   const iconClose = document.querySelector("#iconClose"),
     iconHamburger = document.querySelector("#iconHamburger"),
-    menuButton = document.querySelector("header button"),
+    menuButton = document.querySelector("#menuButton"),
     menu = document.querySelector("aside");
 
   let isMenuShown = false;
