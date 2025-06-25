@@ -30,7 +30,11 @@ const { page } = Astro.props;
       class="sticky top-0 left-0 flex w-full items-center justify-between px-6 py-6 md:justify-normal md:p-0 lg:items-end"
     >
       <div class="flex w-1/2 items-center">
-        <Logo class="md:mx-10 lg:mx-16 lg:my-6" />
+        <a class="flex md:mx-10 lg:mx-16 lg:my-6" href="/">
+          <button type="button">
+            <Logo />
+          </button>
+        </a>
 
         <hr
           class="z-10 my-auto -mr-8 hidden flex-auto text-white opacity-25 lg:flex"
